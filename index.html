@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0812">
+  <meta name="description" content="Live public TikTok profile statistics for Veyrix7.">
+  <title>Veyrix7 — TikTok Stats</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b0812;--panel:#14101f;--panel2:#1b1429;--line:#30233f;--muted:#a89bb9;--white:#f7f1ff;--purple:#a855f7;--pink:#e879f9;--green:#86efac}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -12%,#382053 0,transparent 50%),var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--white)}
+    a{color:inherit}.wrap{width:min(100% - 32px,920px);margin:0 auto;padding:54px 0 30px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:42px}.brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:-.03em}.logo{width:42px;height:42px;display:grid;place-items:center;border:1px solid #6d3993;border-radius:13px;background:linear-gradient(145deg,#3f1c5d,#170f24);color:#e9b8ff;font-size:20px}.tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#d8b4fe;border:1px solid #4a3061;border-radius:99px;padding:8px 11px}
+    .hero{text-align:center;margin-bottom:29px}.eyebrow{color:#c084fc;text-transform:uppercase;letter-spacing:.2em;font-weight:750;font-size:11px}.hero h1{font-size:clamp(34px,7vw,56px);line-height:1.04;letter-spacing:-.06em;margin:13px 0 12px}.hero p{margin:0;color:var(--muted);font-size:15px}.profile{display:flex;align-items:center;justify-content:center;gap:13px;margin-top:24px}.avatar{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#9333ea,#db2777);border:2px solid #d8b4fe;overflow:hidden;font-size:25px;font-weight:850;flex-shrink:0}.avatar img{width:100%;height:100%;object-fit:cover}.profile-copy{text-align:left}.profile-name{font-size:18px;font-weight:800}.handle{color:var(--muted);margin:3px 0 8px;font-size:13px}.live{color:var(--green);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-top:34px}.card{background:linear-gradient(160deg,rgba(29,21,43,.97),rgba(17,13,26,.97));border:1px solid var(--line);border-radius:17px;padding:20px 18px;min-height:155px;box-shadow:0 18px 55px #0002}.card-top{display:flex;align-items:center;justify-content:space-between;gap:7px;color:var(--muted);font-size:12px;font-weight:650}.icon{color:#d8b4fe;width:34px;height:34px;display:grid;place-items:center;background:#352047;border-radius:10px;font-size:18px}.value{font-size:clamp(24px,4vw,34px);font-weight:850;letter-spacing:-.06em;margin-top:20px;overflow-wrap:anywhere}.sub{font-size:11px;color:#88789b;margin-top:6px}.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:28px 0 12px}.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border-radius:11px;border:1px solid #563477;background:#22162f;color:var(--white);text-decoration:none;font-weight:750;font-size:13px;cursor:pointer;transition:transform .15s,border-color .15s}.button.primary{background:linear-gradient(100deg,#9333ea,#a855f7);border-color:#b66bf8}.button:hover{transform:translateY(-1px);border-color:#c084fc}.button:disabled{opacity:.55;cursor:wait;transform:none}.status{text-align:center;color:var(--muted);font-size:12px;min-height:19px;margin-top:13px}.status.error{color:#fda4af}.footer{border-top:1px solid #241a31;margin-top:39px;padding-top:18px;display:flex;align-items:center;justify-content:space-between;gap:15px;color:#887b98;font-size:11px}.footer a{text-decoration:none}.footer a:hover{color:#e9d5ff}.note{background:#151020;border:1px solid #2e213b;border-radius:12px;padding:14px 16px;margin-top:23px;color:#a99bb8;font-size:12px;line-height:1.6}.note strong{color:#e9d5ff}
+    @media(max-width:700px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.wrap{padding-top:28px}.top{margin-bottom:34px}.card{min-height:140px}}@media(max-width:390px){.stats{gap:9px}.card{padding:15px 13px}.value{font-size:25px}.tag{font-size:9px;padding:7px 8px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <div class="brand"><div class="logo">V</div><span>VEYRiX7 <span style="color:#b87af5">/ STATS</span></span></div>
+      <div class="tag">TikTok profile</div>
+    </header>
+    <section class="hero">
+      <div class="eyebrow">Creator dashboard</div>
+      <h1>Your numbers.<br><span style="color:#c084fc">No guesswork.</span></h1>
+      <p>Public TikTok profile stats, all in one place.</p>
+      <div class="profile">
+        <div class="avatar" id="avatar" aria-label="Veyrix7 profile image">V</div>
+        <div class="profile-copy">
+          <div class="profile-name" id="displayName">Veyrix7</div>
+          <div class="handle">@veyrix7</div>
+          <div class="live" id="statusPill">● Stats not synced</div>
+        </div>
+      </div>
+    </section>
+    <section class="stats" aria-label="TikTok statistics">
+      <article class="card"><div class="card-top"><span>Followers</span><span class="icon">♙</span></div><div class="value" id="followers">—</div><div class="sub">People following you</div></article>
+      <article class="card"><div class="card-top"><span>Following</span><span class="icon">↗</span></div><div class="value" id="following">—</div><div class="sub">Accounts you follow</div></article>
+      <article class="card"><div class="card-top"><span>Total likes</span><span class="icon">♥</span></div><div class="value" id="likes">—</div><div class="sub">Likes across your profile</div></article>
+      <article class="card"><div class="card-top"><span>Videos</span><span class="icon">▶</span></div><div class="value" id="videos">—</div><div class="sub">Public video count</div></article>
+    </section>
+    <div class="actions">
+      <a class="button primary" href="https://www.tiktok.com/@veyrix7" target="_blank" rel="noreferrer">↗ Open TikTok profile</a>
+      <button class="button" id="refresh" type="button">⟳ Refresh stats</button>
+    </div>
+    <div id="status" class="status" role="status" aria-live="polite">Loading saved stats…</div>
+    <div class="note"><strong>About the numbers:</strong> this page reads a public stats snapshot saved by GitHub Actions. It refreshes automatically about every 30 minutes when the workflow runs. TikTok data comes from an unofficial third-party endpoint, so updates can occasionally fail.</div>
+    <footer class="footer"><span>VEYRiX7 · TikTok stats</span><a href="https://github.com/Veyrix73/tiktok">Source code on GitHub ↗</a></footer>
+  </main>
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const compact = new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 });
+    const full = new Intl.NumberFormat("en");
+    function metric(value) {
+      if (value === null || value === undefined || value === "" || !Number.isFinite(Number(value))) return "—";
+      const n = Number(value);
+      return n >= 10000 ? compact.format(n) : full.format(n);
+    }
+    function showStatus(message, isError = false) {
+      $("status").textContent = message;
+      $("status").classList.toggle("error", isError);
+    }
+    async function loadStats(manual = false) {
+      const button = $("refresh");
+      button.disabled = true;
+      if (manual) showStatus("Checking the latest saved stats…");
+      try {
+        const response = await fetch("./stats.json?t=" + Date.now(), { cache: "no-store" });
+        if (!response.ok) throw new Error("Could not load stats.json (HTTP " + response.status + ").");
+        const data = await response.json();
+        $("displayName").textContent = data.displayName || "Veyrix7";
+        $("followers").textContent = metric(data.followerCount);
+        $("following").textContent = metric(data.followingCount);
+        $("likes").textContent = metric(data.likeCount);
+        $("videos").textContent = metric(data.videoCount);
+        if (data.avatarUrl) {
+          const img = document.createElement("img");
+          img.src = data.avatarUrl;
+          img.alt = "Veyrix7 profile";
+          img.referrerPolicy = "no-referrer";
+          img.onerror = () => img.remove();
+          $("avatar").replaceChildren(img);
+        }
+        if (data.updatedAt) {
+          const date = new Date(data.updatedAt);
+          const time = date.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
+          $("statusPill").textContent = "● Snapshot available";
+          showStatus("Last updated: " + time + (data.message ? " · " + data.message : ""));
+        } else {
+          $("statusPill").textContent = "● Waiting for first sync";
+          showStatus("No snapshot yet. Run Actions → Refresh TikTok stats → Run workflow on GitHub.");
+        }
+      } catch (error) {
+        showStatus(error.message || "Unable to load stats right now.", true);
+      } finally {
+        button.disabled = false;
+      }
+    }
+    $("refresh").addEventListener("click", () => loadStats(true));
+    loadStats();
+  </script>
+</body>
+</html>
