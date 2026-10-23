@@ -1,0 +1,13 @@
+{
+  "username": "veyrix7",
+  "displayName": "Veyrix7",
+  "profileUrl": "https://www.tiktok.com/@veyrix7",
+  "avatarUrl": null,
+  "followerCount": null,
+  "followingCount": null,
+  "likeCount": null,
+  "videoCount": null,
+  "updatedAt": null,
+  "source": "TikWM public profile endpoint",
+  "message": "No stats sync has completed yet. Open GitHub Actions and run the Refresh TikTok stats workflow."
+}
